@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ecommercewebapp-c623a": {
+      "hosting": {
+        "ecommerce-project": [
+          "ecommercewebapp-c623a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ecommercewebapp-c623a"
+  }
+}

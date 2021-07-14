@@ -1,0 +1,41 @@
+<div class="checkout_products">
+    <p class="price">Price</p>
+    <div class="checkout_product" *ngFor="let p of checkout_products">
+       <img src="{{p.image}}" alt="" class="checkout_product_img">
+       <div class="checkout_product_info">
+           
+           <p class="checkout_product_title">
+            {{p.title}}
+
+           </p>
+           <img src="https://th.bing.com/th/id/R9b4bc2c089e9c573ff19944d79a80c02?rik=wtDFPt1ibPiQog&riu=http%3a%2f%2fwww.theteethwhiteningcompany.co.uk%2fstripfast5000%2fassets%2fimages%2fbest_seller_banner.jpg&ehk=y%2fq93xiPkNHP0XE%2bYTA94tFVOqIqWbQROceC1Pw14mw%3d&risl=&pid=ImgRaw" alt="">
+           <p class="checkout_product_in_stock">In Stock</p>    
+          <div class="checkout_product_gift">
+             
+              <input type="checkbox">
+              <p class  = "checkout_click_instruction">It's a gift</p>
+              <br><a routerLink="/" class="checkout_product_more"> Learn more</a>
+          </div>  
+          <div class="checkout_options">
+            <div class="checkout_dropdown">
+
+       
+              </div>
+              <a (click)="removeItem(p)"> Delete</a>
+              <a href="#">Save for later</a>
+              <a href="#">Compare with similar items</a>
+
+          </div>   
+          
+       </div>
+       <div class="checkout_products_price"> 
+           <p> <strong>R{{p.price}}</strong> </p>
+       </div>    
+
+    </div>
+    <div class="checkout_products_subtotal">
+        <p>Subtotal ({{shopping_cart_service.getCartLength()}} items):
+             <strong>R{{shopping_cart_service.getTotal()}}</strong> </p>
+
+    </div>
+</div>

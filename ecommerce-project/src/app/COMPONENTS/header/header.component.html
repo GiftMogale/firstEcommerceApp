@@ -1,0 +1,44 @@
+
+<div class = "header">
+    <nav class = "header_top">
+        <div class = "header_menu">
+          <div>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <mat-icon routerLink = "/">menu</mat-icon><span class  = "header_menu_icon"></span>
+    </div>    
+    
+     <img routerLink= "/" src="https://greenplanetadvertiser.com/complogo.png"  alt = "https://greenplanetadvertiser.com/complogo.png" class = "header_menu_logo">
+    <div class = "header_menu_searchbar"> 
+      <input type = "text" class = "header_menu_input">
+    <div class="header_menu_searchbar_icon">
+    <mat-icon>search</mat-icon>         
+      </div>
+    
+    </div>
+    <div  class="header_menu_signIn">
+      <span (click) = "signOut()" class = "header_menu_top_item " *ngIf = "auth.isLoggedIn()">Hi there, {{auth. getUser()}}</span>
+      <span routerLink= "/login" class = "header_menu_top_item "*ngIf = "!auth.isLoggedIn()">Hi there, Sign In</span>
+      <span class = "header_menu_bottom_item ">Accounts & Lists</span>
+    </div>
+    
+    <div routerLink= "/login" class="header_menu_signIn"> 
+      <span class = "header_menu_top_item ">Returns</span>
+      <span class = "header_menu_bottom_item "> & Orders</span>
+      </div>
+    <div routerLink= "/checkout" class = "header_menu_cart">
+      <mat-icon>shopping_cart</mat-icon>
+    <p class = "header_cart_number">{{shoppingCart.getCartLength()}}</p>    
+    </div>
+      </div>
+          
+    </nav>
+    
+    <nav class= "header_bottom" >
+    <div class  = "header_bottom_location_text">
+    <span class="header_left_line_one">Delivery to </span>  
+    <span class="header_left_line_two">Rustenburg</span>          
+    </div>
+    
+    </nav>    
+               
+    </div>   
